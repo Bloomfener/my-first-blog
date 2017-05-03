@@ -1,0 +1,23 @@
+from django.core.files import File
+
+f = File(open(os.path.join(IMPORT_DIR, 'fotos', photo), 'r'))
+p = Photo(name=f.name, image=f, parent=supply.supply_ptr)
+name = str(uuid1()) + os.path.splitext(f.name)[1]
+p.image.save(name, f)
+p.save()
+
+f = open('folder_path', 'r')
+a.attachment = File(f)
+a.save()
+f.close()
+
+
+from blog.models import Post
+from django.contrib.auth.models import User
+me = User.objects.get(username='Bloomfener')
+Post.objects.create(author=me, title='11', text='Test')
+post.publish('11')
+
+
+
+
